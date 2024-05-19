@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url("path/to/your/images/hakkımda.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+header h1 {
+    font-family: "Pacifico", cursive;
+    font-size: 4rem;
+    border: 10px;
+    border-radius: 10px;
+}
+
+header h3 {
+    font-family: "Satisfy", cursive;
+    font-size: 2.5rem;
+    border: 10px;
+    border-radius: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.sub-menu li {
+    display: block;
+}
+
+.sub-menu li:hover {
+    background-color: #ddd;
+}
+
+.sub-menu li a:hover {
+    color: blue;
+}
+
+.city-wrapper .city p {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black; /* Yazıların etrafına 1 piksel kalınlığında siyah bir çerçeve */
+    border-radius: 5px; /* Kenar kıvrımlarını yumuşat */
+}
+
+.city-wrapper {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black; /* Şehirlerin arasına 1 piksel kalınlığında siyah bir çerçeve */
+    border-radius: 5px; /* Kenar kıvrımlarını yumuşat */
+    margin-top: 50px;
+}
+
+.city {
+    text-align: center;
+    border: 1px solid black; /* Şehir kutularına 1 piksel kalınlığında siyah bir çerçeve */
+    border-radius: 5px; /* Kenar kıvrımlarını yumuşat */
+}
+
+.city img {
+    width: 300px;
+    height: 200px;
+    border: 1px solid black; /* Resimlere 1 piksel kalınlığında siyah bir çerçeve */
+    border-radius: 5px; /* Kenar kıvrımlarını yumuşat */
+    object-fit: cover;
+    margin-top: 20px;
+}

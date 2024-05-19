@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../public/css/index.css">
+    <title>İletişim Sayfası</title>
 </head>
 <body>
+
+
+
+
+
+
     <div class="topbar">
         <ul>
             <div class="wrapper target">
@@ -43,62 +46,64 @@
             </div>
         </ul>
     </div>
-    
-<header>
-    <div class="headers target">
-        <img src="../public/img/background/home.jpg" alt="background">
-        <h1>Tanıtım</h1>
-        <h3>Benim Hayatım</h3>
-</div></header>
-    
-<script src="../public/js/scroll.js"></script>
 
-<div class="home">
- <div class="wrapper">
-  <div class="posts target">
-        <div class="post">
-
-      
-             <h1>Başlık</h1>
-        
-            <img src="../public/img/background/content-1.jpg" alt="content">
-            <p>
-            yazılar burada
-
-
-
-
-             </p>
-         <div class="authorAndDate">
-            <span>Mehmet Kaan Kurt </span>
-            <span>19.05.2024</span>
-
-        </div>
-
-    </div>
-  </div>
-  <div class="sidebar">
-        <div class="area target">
-            <h3>Ben Kimim</h3>
-            <img    src="../public/img/user/user-2.png" alt="user">
-            <div class="categories">
-                <span>art</span>
-                <span>art</span>
-                <span>art</span>
-                <span>art</span>
+    <div id="app">
+        <form id="contact" @submit.prevent="submitForm">
+            <h2>İletişim Sayfası</h2>
+            <div class="form-control">
+                <input v-model="formData.name" placeholder="Adınız Soyadınız" type="text" required>
             </div>
+            <div class="form-control">
+                <input v-model="formData.email" placeholder="E-Posta Adresiniz" type="email" required>
+            </div>
+            <div class="form-control">
+                <input v-model="formData.subject" placeholder="Konu" type="text" required>
+            </div>
+            <div class="form-control">
+                <textarea v-model="formData.message" placeholder="Lütfen Mesajınızı Buraya Yazın.." required></textarea>
+            </div>
+            <div class="form-control">
+                <button type="button" @click="clearForm">TEMİZLE</button>
+                <button type="submit">GÖNDER</button>
+            </div>
+        </form>
+        <div class="submitted-data">
+            <h3>Gönderilen Bilgiler:</h3>
+            <p>Ad Soyad: {{ formData.name }}</p>
+            <p>E-Posta: {{ formData.email }}</p>
+            <p>Konu: {{ formData.subject }}</p>
+            <p>Mesaj: {{ formData.message }}</p>
         </div>
-        <div class="area target">
-            <h3>Boş Alan</h3>
-          <a href="/admin/add">AddPost</a>
-          <a href="#">Your Performance</a>
-          <a href="#">Number Of Views</a>
-        </div>
-  </div>
-</div>
-</div>
+    </div>
 
-
-
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                formData: {
+                    name: '',
+                    email: '',
+                    subject: '',
+                    message: ''
+                }
+            },
+            methods: {
+                submitForm() {
+                    // Form gönderildiğinde burada işlemler yapabilirsiniz
+                    console.log('Form gönderildi:', this.formData);
+                },
+                clearForm() {
+                    // Formu temizle
+                    this.formData = {
+                        name: '',
+                        email: '',
+                        subject: '',
+                        message: ''
+                    };
+                }
+            }
+        });
+    </script>
 </body>
 </html>

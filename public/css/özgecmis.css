@@ -1,0 +1,49 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Font family değiştirildi */
+    margin: 0;
+    padding: 0;
+    background-image: url('../public/img/background/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Sayfayı dikey olarak ortala */
+    justify-content: center; /* Sayfayı yatay olarak ortala */
+    min-height: 100vh; /* Sayfa boyutunu minimum ekran yüksekliği kadar yap */
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 800px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-top: 30px; /* Sayfanın üstünde biraz boşluk bırak */
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    max-width: 100px; /* Maksimum genişlik belirlendi */
+    max-height: 100px; /* Maksimum yükseklik belirlendi */
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.details {
+    flex: 1;
+    padding: 0 20px; /* Yatay padding eklendi */
+    border-right: 1px solid #ccc;
+    text-align: center; /* Metni ortala */
+}
+
