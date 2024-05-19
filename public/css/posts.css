@@ -1,0 +1,51 @@
+.posts{
+    flex: 9;
+    height: 30px;
+    padding: 0 20px;
+}
+
+.posts .post{
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.posts h1{
+    font-family: "Pacifico", cursive;
+}
+
+.posts img{
+    border-radius: 10px;
+}
+
+.posts p {
+    padding: 5px;
+    font-family: "Arvo", serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    line-height: 23px;
+}
+
+.posts .authorAndDate{
+    
+    width: 100%;    
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.posts .authorAndDate span:nth-child(1){
+    font-family: "Dancing Script", cursive;
+
+}
+
+.posts .authorAndDate span:nth-child(2){
+    font-family: "Ubuntu Mono", monospace;
+    font-weight: 700;
+
+}
