@@ -1,0 +1,66 @@
+body {
+    background-color: #ddd;
+    margin: 0; /* Sayfa kenar boşluklarını kaldırır */
+    padding: 0; /* Sayfa içeriğinin kenar boşluklarını kaldırır */
+}
+
+.slider-container {
+    width: 80%;
+    margin: 0 auto; /* Yatayda ortalar */
+    overflow: hidden;
+    position: relative; 
+    display: flex; /* Resimleri yatayda hizalamak için */
+    align-items: center; /* Dikeyde ortalar */
+}
+
+.slider {
+    position: relative;
+    margin: 0 auto;
+}
+
+.slides {
+    display: flex;
+    width: fit-content; /* Resimlerin container'a sığmasını sağlar */
+    transition: transform 0.5s ease; /* Slider geçiş efekti */
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+img {
+    width: 100%; /* Resimlerin maksimum genişliğini container'a göre ayarlar */
+    height: auto;
+    object-fit: cover; /* Resimleri bozulmadan boyutlandırır */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+button:hover {
+    background: #333;
+}
+
+video {
+    width: 80%; 
+    position: absolute;
+    top: 10px; /* Üstten 10 piksel uzaklık */
+    left: 50%;
+    transform: translateX(-50%); /* Yatayda ortalar */
+}

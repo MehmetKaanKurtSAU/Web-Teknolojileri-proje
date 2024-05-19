@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>İletişim Sayfası</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slider</title>
+  <link rel="stylesheet" href="../public/css/index.css">
+  <link rel="stylesheet" href="../public/css/iletisim.css">
 </head>
 <body>
-
-
-
-
-
-
     <div class="topbar">
         <ul>
             <div class="wrapper target">
@@ -18,10 +16,10 @@
                     <li><a href="/Web%20Teknolojileri%20proje/index.html">HAKKIMDA</a>
                         <div class="sub-menu-1">
                             <ul>
-                                <li class="hover-me"><a href=" /Web%20Teknolojileri%20proje/pages/Şehirler.html">Şehirler</a>
+                                <li class="hover-me"><a href="/Web%20Teknolojileri%20proje/pages/şehirler.html">Şehirim</a>
                                     <div class="sub-menu-2">
                                         <ul>
-                                            <li class="hover-me2"><a href=" /Web%20Teknolojileri%20proje/pages/Miraslarımız.html">Miraslarımız</a>
+                                            <li class="hover-me2"><a href="#">Miraslarımız</a>
                                                 <div class="sub-menu-3">
                                                     <ul>
                                                         <li><a href=" /Web%20Teknolojileri%20proje/pages/Miras-Trabzon.html">Trabzon</a></li>
@@ -35,8 +33,9 @@
                                     </div>
                                 </li>
                                 <li><a href="/Web%20Teknolojileri%20proje/pages/hobiler.html">Hobiler</a></li>
-                                <li><a href="#">Özgeçmiş</a></li>
-                                <li><a href="#">Akademik Hayatım</a></li>
+                                <li><a href="/Web%20Teknolojileri%20proje/pages/Özgeçmiş.html">Özgeçmiş</a></li>
+                                <li><a href="/Web%20Teknolojileri%20proje/pages/iletisim.html">İletisim</a></li>
+                    
                             </ul>
                         </div>
                     </li>
@@ -65,6 +64,8 @@
             <div class="form-control">
                 <button type="button" @click="clearForm">TEMİZLE</button>
                 <button type="submit">GÖNDER</button>
+                <button type="button" onclick="denetim()">Js ile denetim</button>
+                <button type="button">Vue.Js ile denetim</button>
             </div>
         </form>
         <div class="submitted-data">
@@ -77,33 +78,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <script>
-        new Vue({
-            el: '#app',
-            data: {
-                formData: {
-                    name: '',
-                    email: '',
-                    subject: '',
-                    message: ''
-                }
-            },
-            methods: {
-                submitForm() {
-                    // Form gönderildiğinde burada işlemler yapabilirsiniz
-                    console.log('Form gönderildi:', this.formData);
-                },
-                clearForm() {
-                    // Formu temizle
-                    this.formData = {
-                        name: '',
-                        email: '',
-                        subject: '',
-                        message: ''
-                    };
-                }
-            }
-        });
-    </script>
+    <script src="/public/js/sbmtform.js"></script>
 </body>
 </html>
