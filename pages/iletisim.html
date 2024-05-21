@@ -1,83 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Slider</title>
+  <title>İletişim Formu</title>
   <link rel="stylesheet" href="../public/css/index.css">
   <link rel="stylesheet" href="../public/css/iletisim.css">
 </head>
 <body>
-    <div class="topbar">
-        <ul>
-            <div class="wrapper target">
-                <div class="center">
-                    <li><a href="/Web%20Teknolojileri%20proje/index.html">ANA SAYFA</a></li>
-                    <li><a href="/Web%20Teknolojileri%20proje/index.html">HAKKIMDA</a>
-                        <div class="sub-menu-1">
-                            <ul>
-                                <li class="hover-me"><a href="/Web%20Teknolojileri%20proje/pages/şehirler.html">Şehirim</a>
-                                    <div class="sub-menu-2">
-                                        <ul>
-                                            <li class="hover-me2"><a href="#">Miraslarımız</a>
-                                                <div class="sub-menu-3">
-                                                    <ul>
-                                                        <li><a href=" /Web%20Teknolojileri%20proje/pages/Miras-Trabzon.html">Trabzon</a></li>
-                                                        <li><a href=" /Web%20Teknolojileri%20proje/pages/Miras-Istanbul.html">Istanbul</a></li>
-                                                        <li><a href=" /Web%20Teknolojileri%20proje/pages/Miras-Bursa.html">Bursa</a></li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                            <li><a href="#">Takımlarımız</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li><a href="/Web%20Teknolojileri%20proje/pages/hobiler.html">Hobiler</a></li>
-                                <li><a href="/Web%20Teknolojileri%20proje/pages/Özgeçmiş.html">Özgeçmiş</a></li>
-                                <li><a href="/Web%20Teknolojileri%20proje/pages/iletisim.html">İletisim</a></li>
-                    
-                            </ul>
+  <div class="topbar">
+    <ul>
+      <div class="wrapper target">
+        <div class="center">
+          <li><a href="/Masaüstü/index.html">ANA SAYFA</a></li>
+          <li><a href="/Masaüstü/index.html">HAKKIMDA</a>
+            <div class="sub-menu-1">
+              <ul>
+                <li class="hover-me"><a href="/Masaüstü/pages/sehirler.html">Şehirim</a>
+                  <div class="sub-menu-2">
+                    <ul>
+                      <li class="hover-me2"><a href="#">Miraslarımız</a>
+                        <div class="sub-menu-3">
+                          <ul>
+                            <li><a href="/Masaüstü/pages/Miras-Trabzon.html">Trabzon</a></li>
+                            <li><a href="/Masaüstü/pages/Miras-Istanbul.html">Istanbul</a></li>
+                            <li><a href="/Masaüstü/pages/Miras-Bursa.html">Bursa</a></li>
+                          </ul>
                         </div>
-                    </li>
-                    <li><a href="/Web%20Teknolojileri%20proje/Login-Register php/login system/register_form.php">KAYIT OL</a></li>
-                    <li><a href="/Web%20Teknolojileri%20proje/Login-Register php/login system/login_form.php">GIRIŞ YAP</a></li>
-                </div>
+                      </li>
+                      <li><a href="#">Takımlarımız</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li><a href="/Masaüstü/pages/hobiler.html">Hobiler</a></li>
+                <li><a href="/Masaüstü/pages/Özgeçmiş.html">Özgeçmiş</a></li>
+                <li><a href="/Masaüstü/pages/iletisim.html">İletişim</a></li>
+              </ul>
             </div>
-        </ul>
-    </div>
-
-    <div id="app">
-        <form id="contact" @submit.prevent="submitForm">
-            <h2>İletişim Sayfası</h2>
-            <div class="form-control">
-                <input v-model="formData.name" placeholder="Adınız Soyadınız" type="text" required>
-            </div>
-            <div class="form-control">
-                <input v-model="formData.email" placeholder="E-Posta Adresiniz" type="email" required>
-            </div>
-            <div class="form-control">
-                <input v-model="formData.subject" placeholder="Konu" type="text" required>
-            </div>
-            <div class="form-control">
-                <textarea v-model="formData.message" placeholder="Lütfen Mesajınızı Buraya Yazın.." required></textarea>
-            </div>
-            <div class="form-control">
-                <button type="button" @click="clearForm">TEMİZLE</button>
-                <button type="submit">GÖNDER</button>
-                <button type="button" onclick="denetim()">Js ile denetim</button>
-                <button type="button">Vue.Js ile denetim</button>
-            </div>
-        </form>
-        <div class="submitted-data">
-            <h3>Gönderilen Bilgiler:</h3>
-            <p>Ad Soyad: {{ formData.name }}</p>
-            <p>E-Posta: {{ formData.email }}</p>
-            <p>Konu: {{ formData.subject }}</p>
-            <p>Mesaj: {{ formData.message }}</p>
+          </li>
+          <li><a href="/Masaüstü/Login-Register php/login system/register_form.php">KAYIT OL</a></li>
+          <li><a href="/Masaüstü/Login-Register php/login system/login_form.php">GIRIŞ YAP</a></li>
         </div>
-    </div>
+      </div>
+    </ul>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <script src="/public/js/sbmtform.js"></script>
+  <div id="app">
+    <form id="contact-form" @submit.prevent="submitForm">
+      <h2>İletişim Sayfası</h2>
+      <div class="form-control">
+        <input v-model="formData.name" id="name" placeholder="Adınız Soyadınız" type="text" required>
+      </div>
+      <div class="form-control">
+        <input v-model="formData.email" id="email" placeholder="E-Posta Adresiniz" type="email" required>
+      </div>
+      <div class="form-control">
+        <input v-model="formData.subject" id="subject" placeholder="Konu" type="text" required>
+      </div>
+      <div class="form-control">
+        <textarea v-model="formData.message" id="message" placeholder="Lütfen Mesajınızı Buraya Yazın.." required></textarea>
+      </div>
+      <div class="form-control">
+        <button type="button" @click="jsKontrol">JS Kontrol</button>
+        <button type="button" @click="vueKontrol">Vue.js Kontrol</button>
+        <button type="submit" v-if="!showConfirm">GÖNDER</button>
+        <button type="button" v-if="showConfirm" @click="confirmSubmit">Tamam</button>
+        <button type="button" v-if="showConfirm" @click="cancelSubmit">İptal</button>
+      </div>
+    </form>
+    <div class="submitted-data">
+      <h3>Gönderilen Bilgiler:</h3>
+      <p>Ad Soyad: {{ formData.name }}</p>
+      <p>E-Posta: {{ formData.email }}</p>
+      <p>Konu: {{ formData.subject }}</p>
+      <p>Mesaj: {{ formData.message }}</p>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script>
+    function isValidEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+
+    new Vue({
+      el: '#app',
+      data: {
+        formData: {
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        },
+        showConfirm: false
+      },
+      methods: {
+        jsKontrol() {
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const subject = document.getElementById('subject').value;
+          const message = document.getElementById('message').value;
+
+          if (!isValidEmail(email)) {
+            alert('Lütfen geçerli bir e-posta adresi girin.');
+            return;
+          }
+
+          if (!name || !email || !subject || !message) {
+            alert('Lütfen tüm alanları doldurun.');
+            return;
+          }
+
+          this.showConfirm = true;
+        },
+        vueKontrol() {
+          const email = this.formData.email;
+
+          if (!isValidEmail(email)) {
+            alert('Lütfen geçerli bir e-posta adresi girin.');
+            return;
+          }
+
+          if (!this.formData.name || !this.formData.subject || !this.formData.message) {
+            alert('Lütfen tüm alanları doldurun.');
+            return;
+          }
+
+          this.showConfirm = true;
+        },
+        confirmSubmit() {
+          document.getElementById('contact-form').submit();
+        },
+        cancelSubmit() {
+          this.showConfirm = false;
+        },
+        submitForm() {
+          // Form gönderildiğinde burada işlemler yapılabilir.
+          // Ancak, Vue.js ile kontrol edilen form olduğu için bu fonksiyonu boş bırakıyoruz.
+        }
+      }
+    });
+  </script>
 </body>
 </html>

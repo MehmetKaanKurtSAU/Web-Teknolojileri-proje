@@ -92,3 +92,51 @@ nav ul {
     object-fit: cover;
     margin-top: 20px;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.Film {
+    margin-top: 50px;
+    padding: 60px;
+    text-align: center;
+}
+
+.Film p {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.film-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.film-gallery img {
+    width: 300px; /* Resmin genişliği */
+    height: 450px; /* Resmin yüksekliği */
+    object-fit: contain; /* Resmin tamamının görünmesini sağlar */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.film-gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
